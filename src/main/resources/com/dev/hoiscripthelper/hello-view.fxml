@@ -1,16 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
-
 <?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.dev.hoiscripthelper.HelloController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
+<VBox alignment="CENTER" prefHeight="469.0" prefWidth="388.0" spacing="20.0" style="-fx-background-color: #ffffff;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/19" fx:controller="com.dev.hoiscripthelper.Controller">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <AnchorPane prefHeight="530.0" prefWidth="744.0" style="-fx-background-color: #ffffff;">
+      <children>
+         <Button fx:id="enterCodeButton" layoutX="14.0" layoutY="70.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="149.0" text="Ввести код" />
+         <Button fx:id="chooseTamplateButton" layoutX="185.0" layoutY="70.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="149.0" text="Выбрать шаблон" />
+         <Button fx:id="enterKeyButton" layoutX="14.0" layoutY="197.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="149.0" text="Ввести ключи" />
+         <Button layoutX="86.0" layoutY="303.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="177.0" style="-fx-background-color: #ffb841;" text="Размножить скрипт" textFill="WHITE">
+            <font>
+               <Font name="Ubuntu Condensed" size="20.0" />
+            </font>
+         </Button>
+         <Button fx:id="readTagsButton" layoutX="185.0" layoutY="197.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="149.0" text="Считать теги" />
+         <Text fx:id="text1" layoutX="24.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Введите код, который нужно размножить, или выберите готовый шаблон " textAlignment="CENTER" wrappingWidth="300.7294921875" />
+         <Text fx:id="text2" layoutX="24.0" layoutY="145.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Введите список тегов или выберите файлы, названия которых будут считаны в качестве тегов" textAlignment="CENTER" wrappingWidth="300.7294921875">
+            <font>
+               <Font name="Ubuntu" size="13.0" />
+            </font>
+         </Text>
+      </children>
+   </AnchorPane>
+
+    <Label fx:id="welcomeText" />
 </VBox>
